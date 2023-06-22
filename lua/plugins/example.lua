@@ -146,12 +146,9 @@ return {
   --{ import = "lazyvim.plugins.extras.lang.typescript" },
 
   -- add more treesitter parsers
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = {
-  --     ensure_installed = "maintained",
-  --   },
-  -- },
+  -- { "nvim-treesitter/nvim-treesitter", opts = {
+  --   ensure_installed = "maintained",
+  -- } },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
