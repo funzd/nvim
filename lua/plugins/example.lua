@@ -62,17 +62,6 @@ return {
         desc = "Find Plugin File",
       },
     },
-    setup = {
-      extensions = {
-        media_files = {
-          -- filetypes whitelist
-          -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-          filetypes = { "png", "webp", "jpg", "jpeg" },
-          -- find command (defaults to `fd`)
-          find_cmd = "rg",
-        },
-      },
-    },
     -- change some options
     opts = {
       defaults = {
@@ -95,7 +84,17 @@ return {
       end,
     },
   },
-
+  -- add telescope-media-files
+  {
+    "telescope.nvim",
+    dependencies = {
+      "nvim-telescope/telescope-media-files.nvim",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("media_files")
+      end,
+    },
+  },
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
