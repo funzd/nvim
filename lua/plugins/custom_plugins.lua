@@ -1,9 +1,30 @@
 return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+        -- ensure_installed = "",
+        prefer_git = true,
+        highlight = {
+          enable = true, -- false will disable the whole extension
+          disable = {}, -- list of language that will be disabled
+        },
+
+        indent = {
+          enable = false,
+        },
+
+        rainbow = {
+          enable = true,
+        },
+      })
+    end,
+  },
   -- autosave-> save modifications automatically
   {
-    "Pocco81/aaauto-save.nvim",
+    "Pocco81/auto-save.nvim",
     name = "auto-save",
-    lazy = false,
     config = function()
       require("auto-save").setup({ enabled = true })
     end,
@@ -28,12 +49,6 @@ return {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
-    end,
-  },
-  {
-    "AckslD/nvim-gfold.lua",
-    config = function()
-      require("gfold").setup()
     end,
   },
 }

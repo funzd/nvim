@@ -2,7 +2,15 @@ return {
   {
     "sonph/onehalf",
     name = "onehalf",
-    lazy = true,
-    opt = { style = "dark" },
+  },
+  -- {
+  --   "mhartington/oceanic-next",
+  --   name = "oceanic-next",
+  -- },
+  {
+    "LazyVim/LazyVim",
+    opt = {
+      colorscheme = "onehalf",
+    },
   },
 }
