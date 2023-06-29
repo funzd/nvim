@@ -39,11 +39,6 @@ return {
       })
     end,
   },
-  --muren-> replacement plugin
-  {
-    "AckslD/muren.nvim",
-    config = true,
-  },
   --git-> plugins
   {
     "lewis6991/gitsigns.nvim",
