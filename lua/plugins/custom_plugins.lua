@@ -32,6 +32,7 @@ return {
   -- web-dev-icon -> config
   {
     "nvim-tree/nvim-web-devicons",
+    opt = true,
     dependencies = { "DaikyXendo/nvim-material-icon" },
     config = function()
       require("nvim-web-devicons").setup({
