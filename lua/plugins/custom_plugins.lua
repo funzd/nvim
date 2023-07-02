@@ -25,6 +25,7 @@ return {
   {
     "Pocco81/auto-save.nvim",
     name = "auto-save",
+    lazy = false,
     config = function()
       require("auto-save").setup({ enabled = true })
     end,
