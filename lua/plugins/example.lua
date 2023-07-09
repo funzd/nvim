@@ -84,17 +84,6 @@ return {
       end,
     },
   },
-  -- add telescope-media-files
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-media-files.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("media_files")
-      end,
-    },
-  },
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
